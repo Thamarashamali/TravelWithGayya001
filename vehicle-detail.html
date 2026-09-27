@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Details & Distance Booking | TravelWithGayya Sri Lanka</title>
+  <meta name="description"
+    content="Rent Hatchbacks, Small Vans, Large Vans, and Sedans with transparent distance rates ($/100km) in Sri Lanka. Instant WhatsApp booking (075 841 5148).">
+
+  <!-- Favicon & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo-brand">
+        <img src="images/New/Website icons & More/Final_logo bg removed.png" alt="TravelWithGayya Logo"
+          class="brand-logo-img">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages">Tour Packages</a></li>
+        <li><a href="index.html#fleet" class="active">Vehicle Fleet</a></li>
+        <li><a href="index.html#why-us">Why Us</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="index.html#fleet" class="btn btn-outline btn-sm">
+          <i class="fas fa-arrow-left"></i> All Fleet
+        </a>
+        <a href="https://wa.me/94758415148?text=Hi%20Gayya!%20I'm%20inquiring%20about%20vehicle%20rental."
+          target="_blank" class="btn btn-whatsapp btn-sm">
+          <i class="fab fa-whatsapp"></i> 075 841 5148
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Vehicle Hero Header
+       ========================================================================== -->
+  <section class="v-detail-hero">
+    <div class="container">
+      <div class="v-detail-hero-layout">
+        <div class="v-detail-hero-text">
+          <a href="index.html#fleet" class="back-link"><i class="fas fa-chevron-left"></i> Back to Vehicle Fleet</a>
+          <span class="badge badge-gold" id="vBadge">Popular Fleet</span>
+          <h1 id="vTitle">Hatchback</h1>
+          <p id="vDesc" style="color: var(--text-white-muted); margin-bottom: 1.5rem; max-width: 600px;">
+            Loading vehicle specs...
+          </p>
+          <div class="v-price-badge">
+            <span style="font-size: 0.85rem; color: var(--text-white-muted); display: block;">Distance Rate</span>
+            <strong id="vRate" style="font-size: 2rem; color: var(--secondary);">$25 / 100 km</strong>
+          </div>
+        </div>
+        <div class="v-detail-hero-img-box">
+          <img id="vImg" src="images/New/Vehicles/Vitz_white color.jpg" alt="Vehicle Image" class="v-hero-main-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Vehicle Specs & Distance Booking Section
+       ========================================================================== -->
+  <section class="detail-main-section">
+    <div class="container">
+      <div class="detail-layout">
+        <!-- Left Column: Detailed Specs & Amenities -->
+        <div class="detail-left-col">
+          <!-- Specs Grid Card -->
+          <div class="detail-card">
+            <h3><i class="fas fa-sliders-h" style="color: var(--primary);"></i> Technical Specifications</h3>
+            <div class="v-specs-grid" id="vSpecsGrid">
+              <!-- Loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Features & Amenities Card -->
+          <div class="detail-card">
+            <h3><i class="fas fa-shield-alt" style="color: var(--secondary);"></i> Vehicle Features & Key Amenities</h3>
+            <div class="v-features-grid" id="vFeaturesList">
+              <!-- Loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Included Rental Policy Card -->
+          <div class="detail-card">
+            <h3><i class="fas fa-file-contract" style="color: var(--primary);"></i> Rental Terms & Service Inclusions</h3>
+            <ul class="inc-list">
+              <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> <strong>Full Comprehensive Rental Insurance:</strong> Complete insurance coverage with zero hidden penalties.</li>
+              <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> <strong>Free Airport Meet & Greet:</strong> Free pickup/drop-off service at Bandaranaike International Airport (BIA).</li>
+              <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> <strong>24/7 Roadside Assistance:</strong> Island-wide concierge care and immediate replacement vehicle guarantee.</li>
+              <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> <strong>Chauffeur Guide Allowance Included:</strong> When driver option is selected, driver meals and lodging are 100% covered.</li>
+              <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> <strong>Pristine Hygienic Condition:</strong> Deep cleaned, sanitized, and air-conditioned before every journey.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Distance Calculator & Booking Form -->
+        <div class="detail-right-col">
+          <div class="detail-booking-box">
+            <div class="booking-box-header">
+              <h3><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> Distance Fee Calculator</h3>
+              <p>Book this vehicle based on actual travel distance ($/100km)</p>
+            </div>
+
+            <form id="vehicleDetailBookingForm" class="detail-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Pickup Location</label>
+                  <select id="vehDetailPickup" class="form-control">
+                    <option value="bia">Colombo BIA Airport (Free)</option>
+                    <option value="colombo">Colombo City / Hotel</option>
+                    <option value="negombo">Negombo Beach</option>
+                    <option value="kandy">Kandy City</option>
+                    <option value="sigiriya">Sigiriya / Dambulla</option>
+                    <option value="nuwara-eliya">Nuwara Eliya</option>
+                    <option value="ella">Ella Town</option>
+                    <option value="galle">Galle / Unawatuna</option>
+                    <option value="mirissa">Mirissa / Weligama</option>
+                    <option value="yala">Yala National Park</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label><i class="fas fa-flag-checkered" style="color: var(--secondary);"></i> Destination</label>
+                  <select id="vehDetailDropoff" class="form-control">
+                    <option value="kandy">Kandy City</option>
+                    <option value="bia">Colombo BIA Airport</option>
+                    <option value="colombo">Colombo City / Hotel</option>
+                    <option value="sigiriya">Sigiriya / Dambulla</option>
+                    <option value="nuwara-eliya">Nuwara Eliya</option>
+                    <option value="ella">Ella Town</option>
+                    <option value="galle">Galle / Unawatuna</option>
+                    <option value="mirissa">Mirissa / Weligama</option>
+                    <option value="yala">Yala National Park</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="background: rgba(15, 23, 42, 0.4); padding: 0.8rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1);">
+                <label style="font-weight: 700; font-size: 0.85rem; color: var(--secondary); margin-bottom: 0.4rem; display: block;">
+                  <i class="fas fa-exchange-alt"></i> Journey Type:
+                </label>
+                <div style="display: flex; gap: 2rem;">
+                  <label style="font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+                    <input type="radio" name="vehDetailTripType" value="one-way" checked> <strong>One Way</strong>
+                  </label>
+                  <label style="font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+                    <input type="radio" name="vehDetailTripType" value="round-trip"> <strong>Round Trip</strong> (Distance x 2)
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="vehDetailName" class="form-control" placeholder="e.g. Lukas Weber" required>
+              </div>
+
+              <div class="form-group">
+                <label><i class="fas fa-phone"></i> WhatsApp Number</label>
+                <input type="tel" id="vehDetailPhone" class="form-control" placeholder="e.g. +49 151 23456789" required>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label><i class="fas fa-globe"></i> Nationality</label>
+                  <input type="text" id="vehDetailCountry" class="form-control" placeholder="e.g. Germany 🇩🇪">
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-calendar-alt"></i> Travel Date</label>
+                  <input type="date" id="vehDetailDate" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label><i class="fas fa-users"></i> Number of Passengers</label>
+                <input type="number" id="vehDetailPassengers" class="form-control" min="1" max="15" value="2">
+              </div>
+
+              <div class="form-group">
+                <label><i class="fas fa-comment-dots"></i> Special Requests</label>
+                <textarea id="vehDetailNotes" class="form-control" rows="2"
+                  placeholder="e.g. Child safety seat, luggage count, or driver guide request."></textarea>
+              </div>
+
+              <!-- Price Box -->
+              <div class="detail-price-box">
+                <div>
+                  <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;" id="vehCalcDistanceText">115 km (One Way)</span>
+                  <p style="font-size: 0.78rem; color: var(--secondary);" id="vehCalcRateText">$25 / 100 km</p>
+                </div>
+                <div style="text-align: right;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Calculated Fee</span>
+                  <h3 id="vehCalcTotalFee" style="color: var(--whatsapp); font-family: var(--font-heading); font-size: 1.8rem;">$29</h3>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp btn-lg" style="width: 100%; margin-top: 1rem;">
+                <i class="fab fa-whatsapp"></i> Book Vehicle Only via WhatsApp
+              </button>
+
+              <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 0.8rem;">
+                <i class="fas fa-lock"></i> Direct reservation • Contact Gayya (075 841 5148)
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Vehicles Section -->
+      <div style="margin-top: 5rem;">
+        <div class="section-header" style="margin-bottom: 2rem; text-align: left;">
+          <span class="subtitle">Explore Fleet Options</span>
+          <h2>Other Vehicles Available for Rent</h2>
+        </div>
+        <div class="fleet-grid" id="relatedVehiclesGrid">
+          <!-- Loaded dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo-brand" style="margin-bottom: 1rem; display: inline-block;">
+            <img src="images/New/Website icons & More/Final_logo bg removed.png" alt="TravelWithGayya Logo"
+              class="brand-logo-img-footer">
+          </a>
+          <p>Sri Lanka's premier tourist transport concierge. Offering Hatchbacks, Small Vans, Large Vans, and Sedans with direct WhatsApp (075 841 5148) reservation.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Vehicle Fleet</h4>
+          <ul>
+            <li><a href="vehicle-detail.html?id=vitz-01">Hatchback</a></li>
+            <li><a href="vehicle-detail.html?id=hiace-gl-01">Small Van</a></li>
+            <li><a href="vehicle-detail.html?id=hiace-sgl-01">Large Van</a></li>
+            <li><a href="vehicle-detail.html?id=sedan-01">Sedan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Top Tour Packages</h4>
+          <ul>
+            <li><a href="package-detail.html?id=pkg-kandy-ella">Kandy → Nuwara Eliya → Ella</a></li>
+            <li><a href="package-detail.html?id=pkg-sigiriya-dambulla">Sigiriya Rock Fortress</a></li>
+            <li><a href="package-detail.html?id=pkg-galle-mirissa">Galle Fort & Coast</a></li>
+            <li><a href="package-detail.html?id=pkg-yala-safari">Yala National Park Safari</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Direct Support</h4>
+          <ul>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#reviews">Tourist Reviews</a></li>
+            <li><a href="https://wa.me/94758415148" target="_blank">WhatsApp Chat (075 841 5148)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>TravelWithGayya</strong>. All Rights Reserved. Contact: 075 841 5148</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="whatsapp-fab" id="whatsappFab" title="Chat with Gayya on WhatsApp (075 841 5148)">
+    <div class="pulse-ring"></div>
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <!-- Shared Data & Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/vehicle-detail.js"></script>
+</body>
+
+</html>
